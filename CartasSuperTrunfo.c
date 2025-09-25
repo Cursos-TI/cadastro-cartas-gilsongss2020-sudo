@@ -33,6 +33,9 @@ int pontosturisticos2;
 //           LEITURA DOS DADOS DA CARTA 1
 // ===============================================
 
+  printf(" Jogo Trunfo de Cartas\n");
+printf(" CARTA 1: \n");
+
 printf ("Estado: ");
 scanf(" %c", &estado1); 
 
@@ -58,6 +61,8 @@ scanf(" %d", &pontosturisticos1);
 // ===============================================
 //           LEITURA DOS DADOS DA CARTA 2
 // ===============================================
+printf("CARTA 2: \n");
+
 
 printf ("Estado: ");
 scanf(" %c", &estado2); 
@@ -85,8 +90,14 @@ scanf(" %d", &pontosturisticos2);
     //           EXIBIÇÃO DOS DADOS FINAIS
     // ===============================================
 
+    printf(" CARTA 1: \n");
+
+
 printf("- Codigo da carta: %s\n - Estado: %c\n - Nome da cidade: %s\n - População: %d\n", codigodacarta1, estado1, nomedacidade1, populacao1);
 printf("- Area: %.2f\n - PIB: %.2f\n - Pontos Turisticos: %d\n", area1, pib1, pontosturisticos1);
+printf(" Densidade Populacional: = (populacao1 / area1) ");
+
+    printf(" CARTA 2: \n");
 
 printf("- Codigo da carta: %s\n - Estado: %c\n - Nome da cidade: %s\n - População: %d\n", codigodacarta2, estado2, nomedacidade2, populacao2);
 printf("- Area: %.2f\n - PIB: %.2f\n - Pontos Turisticos: %d\n", area2, pib2, pontosturisticos2);

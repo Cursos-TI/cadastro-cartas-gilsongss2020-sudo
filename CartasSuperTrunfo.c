@@ -16,7 +16,10 @@ int populacao1;
 float area1;
 float pib1;
 int pontosturisticos1;
+ // Novas variáveis para os cálculos da Carta 1
 
+float densidadePopulacional1;
+float pibPerCapita1;
 
 //---VARIAVEIS DA CARTA 2---
 
@@ -27,6 +30,9 @@ int populacao2;
 float area2;
 float pib2;
 int pontosturisticos2;
+// NOVAS VARIAVEIS DA CARTA 2
+float densidadePopulacional2;
+float pibPerCapita2;
 
 // Área para entrada de dados
 // ===============================================
@@ -85,6 +91,19 @@ scanf(" %f", &pib2);
 printf("Ponto Turistico: ");
 scanf(" %d", &pontosturisticos2);
 
+
+// ===============================================
+//           CÁLCULOS
+// ===============================================
+// Cálculos para a Carta 1
+ 
+densidadePopulacional1 = ( populacao1 / area1 );
+pibPerCapita1 = (pib1 * 1000000000.0) / populacao1;
+
+// Cálculos para a Carta 2
+densidadePopulacional2 = ( populacao2 / area2 );
+pibPerCapita2 = (pib2 * 1000000000.0) / populacao2;
+
     // Área para exibição dos dados da cidade
     // ===============================================
     //           EXIBIÇÃO DOS DADOS FINAIS
@@ -95,12 +114,17 @@ scanf(" %d", &pontosturisticos2);
 
 printf("- Codigo da carta: %s\n - Estado: %c\n - Nome da cidade: %s\n - População: %d\n", codigodacarta1, estado1, nomedacidade1, populacao1);
 printf("- Area: %.2f\n - PIB: %.2f\n - Pontos Turisticos: %d\n", area1, pib1, pontosturisticos1);
-printf(" Densidade Populacional: = (populacao1 / area1) ");
+printf("----------------------------------\n");
+printf(" Densidade populacional é: %.2f \n ", densidadePopulacional1 );
+printf(" O PIB PERCAPITA é: %.2f\n", pibPerCapita1);
 
     printf(" CARTA 2: \n");
 
 printf("- Codigo da carta: %s\n - Estado: %c\n - Nome da cidade: %s\n - População: %d\n", codigodacarta2, estado2, nomedacidade2, populacao2);
 printf("- Area: %.2f\n - PIB: %.2f\n - Pontos Turisticos: %d\n", area2, pib2, pontosturisticos2);
+printf("----------------------------------\n");
+printf(" Densidade populacional é: %.2f \n ", densidadePopulacional2 );
+printf(" O PIB PERCAPITA é: %.2f\n", pibPerCapita2);
 
 return 0;
 } 
